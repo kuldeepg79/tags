@@ -5,12 +5,11 @@
     - name: Install vsftpd
       yum:
         name: vsftpd
-        state: installed
+        state: present
       tags: [never, alpha]
-      
-    - name: Install httpd
+    - name: Install apache
       yum:
         name: httpd
-        state: installed
-      tags: [never, beta]
+        state: present
+      tags: [never, beta]  
 ...        
