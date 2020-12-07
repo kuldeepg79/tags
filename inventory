@@ -1,4 +1,5 @@
-node2.example.com
-node1.example.com
-node3.example.com
+[dev]
+guest1.example.com
+[web]
+guest2.example.com
 

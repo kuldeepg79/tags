@@ -1,0 +1,16 @@
+---
+- name: Copy content to /tmp/abc.txt
+  hosts: dev
+  tasks:
+    - name: Copy content with alpha
+      copy:
+        content: "Hello world with alpha"
+        dest: /tmp/abc.txt
+      tags: [never, alpha]
+
+    - name: Copy content with beta
+      copy:
+        content: "Hello world with beta"
+        dest: /tmp/abc.txt
+      tags: [never, beta]
+...

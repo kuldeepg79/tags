@@ -1,0 +1,16 @@
+---
+- name: install the httpd and vsftpd package
+  hosts: all
+  tasks:
+    - name: Install httpd service with alpha
+      yum:
+        name: httpd
+        state: latest
+      tags: [never, alpha]  
+
+    - name: Install vsftpd service with beta
+      yum:
+        name: vsftpd
+        state: latest
+      tags: [never, beta]  
+...      
